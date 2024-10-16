@@ -1,22 +1,19 @@
-import "./App.css";
+import HomePage from "./pages/HomePage";
+import { Route, Routes, HashRouter } from "react-router-dom";
+import Pets from "./pages/Pets";
+import AdoptionForm from "./pages/AdoptionForm";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/pets" element={<Pets />} />
+        <Route path="/adoptionForm" element={<AdoptionForm />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </HashRouter>
   );
 }
 
