@@ -1,2 +1,8 @@
 @import "./reset";
 @import "./variables";
+@import "./components/nav-bar.scss";
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
