@@ -1,5 +1,12 @@
+import NavBar from "./components/NavBar";
+
 const AdoptionForm = () => {
-  return <h1>AdoptionForm</h1>;
+  return (
+    <>
+      <NavBar />
+      <h1>Adoption form</h1>
+    </>
+  );
 };
 
 export default AdoptionForm;
